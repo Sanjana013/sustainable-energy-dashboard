@@ -8,7 +8,11 @@ dotenv.config({
 });
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://sustainable-energy-dashboard-frontend.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 const streamRoute = require("./routes/stream");
