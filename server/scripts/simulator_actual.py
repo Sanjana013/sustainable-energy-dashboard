@@ -44,7 +44,7 @@ for _, row in df.iterrows():
             # "threshold": result["threshold"]
         }
 
-        res = requests.post("http://localhost:5000/api/stream", json=payload)
+        res = requests.post("https://sustainable-energy-dashboard.onrender.com/api/stream", json=payload)
         print("[Actual] Sent:", res.status_code, res.text)
 
     except subprocess.CalledProcessError as e:

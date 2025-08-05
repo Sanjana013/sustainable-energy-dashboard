@@ -16,7 +16,9 @@ function App() {
 
   const handleStartSimulation = async () => {
     try {
-      await axios.post("http://localhost:5000/api/simulation/start");
+      await axios.post(
+        "https://sustainable-energy-dashboard.onrender.com/api/simulation/start"
+      );
       toast.success("Sample simulation started");
       setIsRunning(true);
     } catch (err) {
@@ -26,7 +28,9 @@ function App() {
 
   const handleStopSimulation = async () => {
     try {
-      await axios.post("http://localhost:5000/api/simulation/stop");
+      await axios.post(
+        "https://sustainable-energy-dashboard.onrender.com/api/simulation/stop"
+      );
       toast.info("Simulation stopped");
       setIsRunning(false);
     } catch (err) {
@@ -37,7 +41,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/stream/latest");
+        const res = await axios.get(
+          "https://sustainable-energy-dashboard.onrender.com/api/stream/latest"
+        );
         setData(res.data);
 
         if (
@@ -79,9 +85,12 @@ function App() {
 
   const askGemini = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/ai", {
-        query: userQuery,
-      });
+      const res = await axios.post(
+        "https://sustainable-energy-dashboard.onrender.com/api/ai",
+        {
+          query: userQuery,
+        }
+      );
       setGeminiResponse(res.data.answer);
     } catch (err) {
       setGeminiResponse("Failed to get response from Gemini.");
