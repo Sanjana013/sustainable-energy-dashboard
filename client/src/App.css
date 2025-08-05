@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(120deg, #e0f7fa, #e8f5e9);
+  background-attachment: fixed;
+}
+
+.container {
+  padding: 2rem;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.main-content {
+  margin-right: 0;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #2e3a59;
+  font-size: 2.6rem;
+  font-weight: 750;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+}
+
+.message-box {
+  background-color: #fcecb4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #5c3c00;
+}
+
+.message-box h2 {
+  color: #92400e;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.left-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.right-charts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #ffffff, #f9fbff);
+  color: #2e3a59;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e7ff;
+  backdrop-filter: blur(4px);
+  font-family: "Open Sans", sans-serif;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-left: 4px solid #00b894;
+}
+
+.card h3 {
+  font-family: "Nata Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #00b894;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.card p {
+  font-weight: 600;
+  font-size: 0.97rem;
+  color: #34495e;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.alert-active {
+  background: linear-gradient(to bottom right, #fff5f5, #ffecec);
+  border: 5px solid #ff6b6b;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.25);
+  transition: background 0.5s ease, box-shadow 0.5s ease, border-left 0.5s ease;
+}
+
+.alert-active:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border: 6px solid #ff6b6b;
+}
+
+.alert-active h3 {
+  color: #d32f2f;
+}
+
+.alert-active p {
+  color: #c62828;
+  font-weight: 600;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gemini-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gemini-box {
+  margin-top: 1rem;
+}
+
+.gemini-box input {
+  padding: 0.6rem;
+  width: 60%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.gemini-box button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: #007aff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.gemini-box button:hover {
+  background-color: #005bb5;
+}
+
+.gemini-response {
+  margin-top: 1rem;
+  font-style: italic;
+  background: #f0f9ff;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #333;
+}
+
+.open-gemini-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: #5e936c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.open-gemini-btn:hover {
+  background-color: #4c7a59;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.gemini-float button {
+  background-color: #5e936c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(46, 58, 89, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gemini-float button:hover {
+  background-color: #4c7a59;
+  box-shadow: 0 8px 20px rgba(46, 58, 89, 0.35);
+}
+
+.gemini-float {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  background: rgba(243, 250, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+.gemini-float h3 {
+  font-size: 1.2rem;
+  color: #004030;
+  margin: 0;
+}
+
+.gemini-float input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #bcd;
+  font-size: 0.95rem;
+  background: white;
+  color: #222;
+  transition: border 0.3s;
+}
+
+.gemini-float input:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.1);
+  outline: none;
+}
+
+.gemini-float .gemini-response {
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d0e3f0;
+  color: #333;
+  font-size: 0.95rem;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.gemini-response::-webkit-scrollbar {
+  display: none;
+}
+
+.close-gemini {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-gemini:hover {
+  color: #000;
+}
+
+.gemini-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.gemini-controls button {
+  background-color: #5e936c;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 184, 148, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.gemini-controls button:hover {
+  background-color: #4c7a59;
+  /* box-shadow: 0 8px 24px rgba(0, 150, 120, 0.4); */
+  /* transform: translateY(-0.5px); */
+}
