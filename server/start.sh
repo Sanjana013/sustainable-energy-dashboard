@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# Install Python dependencies
-pip3 install -r requirements.txt
+# Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate
 
-# Start your Node.js server
+# Upgrade pip and install Python dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Start your Node.js server (adjust path if needed)
 node index.js

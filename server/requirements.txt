@@ -1,7 +1,3 @@
 pandas
 numpy
-time
-json
-subprocess
 requests
-os
