@@ -34,7 +34,7 @@ for _, row in df.iterrows():
         }
 
         print("Sending Predicted:", payload, flush=True)
-        res = requests.post("http://localhost:5000/api/stream", json=payload)
+        res = requests.post("https://sustainable-energy-dashboard.onrender.com/api/stream", json=payload)
         print("[Predicted] Sent:", res.status_code, res.text)
 
     except subprocess.CalledProcessError as e:
