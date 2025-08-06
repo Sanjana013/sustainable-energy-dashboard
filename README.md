@@ -1,6 +1,6 @@
 Smart Energy Dashboard
 
-A responsive AI-powered dashboard that simulates, predicts, and analyzes smart household energy consumption in real-time using clean energy data. Built with ❤️ using React, Node.js, Express, and Python.
+A responsive AI-powered dashboard that simulates, predicts, and analyzes smart household energy consumption in real-time using clean energy data. Built using React, Node.js, Express, and Python.
 
 ---
 
